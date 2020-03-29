@@ -114,7 +114,7 @@ void TestRootOnly() {
 };
 
 
-int main() {
+int main5() {
     Test1();
 //    TestRootOnly();
     return 0;
