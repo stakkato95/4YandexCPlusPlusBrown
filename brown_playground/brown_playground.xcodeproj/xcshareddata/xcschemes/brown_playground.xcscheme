@@ -47,7 +47,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/artsiomkaliaha/Documents/AI/Coursera/C++/code/brown_playground/brown_playground"
+      customWorkingDirectory = "/Users/artsiomkaliaha/Documents/AI/Coursera/C++/code/4YandexCPlusPlusBrown/brown_playground/brown_playground"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"

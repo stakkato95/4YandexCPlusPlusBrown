@@ -43,7 +43,7 @@ void print(const Collection& collection) {
     }
 }
 
-int main() {
+int main2() {
     ifstream input("holmes.txt");
     
     auto startTime = system_clock::now();
