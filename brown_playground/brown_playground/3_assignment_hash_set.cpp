@@ -140,7 +140,7 @@ void TestEquivalence() {
     assert(2 == bucket.front().value);
 }
 
-int main() {
+int main3() {
     TestSmoke();
     TestEmpty();
     TestIdempotency();
