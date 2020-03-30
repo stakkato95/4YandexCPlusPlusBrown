@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */; };
 		998C786924309C2D00A62FA3 /* 5_assignment_set_iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998C786824309C2D00A62FA3 /* 5_assignment_set_iterator.cpp */; };
 		998C786B2430A81C00A62FA3 /* 6_set_custom_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998C786A2430A81C00A62FA3 /* 6_set_custom_types.cpp */; };
 		998DAAE22431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998DAAE12431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 8_assignment_hashing.cpp; sourceTree = "<group>"; };
 		998C786824309C2D00A62FA3 /* 5_assignment_set_iterator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 5_assignment_set_iterator.cpp; sourceTree = "<group>"; };
 		998C786A2430A81C00A62FA3 /* 6_set_custom_types.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 6_set_custom_types.cpp; sourceTree = "<group>"; };
 		998DAAE12431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 7_set_nested_custom_types.cpp; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				998C786824309C2D00A62FA3 /* 5_assignment_set_iterator.cpp */,
 				998C786A2430A81C00A62FA3 /* 6_set_custom_types.cpp */,
 				998DAAE12431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp */,
+				997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				99FE8446242F79DB005B53C7 /* 1_head_iterator.h in Sources */,
 				99917785243094B300216CE7 /* 4_map_iterators.cpp in Sources */,
+				997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */,
 				99FE844F24308A3B005B53C7 /* 3_assignment_hash_set.cpp in Sources */,
 				998C786B2430A81C00A62FA3 /* 6_set_custom_types.cpp in Sources */,
 				998C786924309C2D00A62FA3 /* 5_assignment_set_iterator.cpp in Sources */,

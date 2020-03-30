@@ -169,7 +169,7 @@ void testTechnicalPassport() {
     cout << duration_cast<milliseconds>(finish - start).count() << " millisec" << endl;
 }
 
-int main() {
+int main7() {
     NewPlateGenerator generator;
     
 //    testNewPlate(generator);
