@@ -10,6 +10,7 @@
 #include <iomanip>
 
 #include <set>
+#include <unordered_set>
 #include <array>
 
 #include <random>
@@ -35,6 +36,20 @@ ostream& operator<<(ostream& os, const Plate& plate) {
     return os;
 }
 
+bool operator<(const Plate& l, const Plate& r) {
+    return tie(l.c1, l.number, l.c2, l.c3, l.region) < tie(r.c1, r.number, r.c2, r.c3, r.region);
+}
+
+bool operator==(const Plate& l, const Plate& r) {
+    return tie(l.c1, l.number, l.c2, l.c3, l.region) == tie(r.c1, r.number, r.c2, r.c3, r.region);
+}
+
+struct PlateHasher {
+    size_t operator()(const Plate& p) const {
+        return p.number;
+    }
+};
+
 class PlateGenerator {
 public:
     Plate generatePlate() {
@@ -58,8 +73,52 @@ private:
     uniform_int_distribution<> regions { 0, 99 };
 };
 
+void testSet(PlateGenerator& generator) {
+    //set requires to overload function '<', because it store elements in a tree
+    set<Plate> plates;
+    
+    cout << "set init" << endl;
+    Plate plate;
+    for (size_t i = 0; i < 10; ++i) {
+        plate = generator.generatePlate();
+        plates.insert(move(plate));
+        cout << plate << endl;
+    }
+    cout << endl;
+    
+    cout << "set print" << endl;
+    for (const Plate& plate : plates) {
+        cout << plate << endl;
+    }
+    cout << endl;
+}
+
+void testUnorderedSet(PlateGenerator& generator) {
+    //unordered_set requires to overload hash function, because it store elements in lists
+    unordered_set<Plate, PlateHasher> plates;
+    
+    cout << "unordered_set init" << endl;
+    Plate plate;
+    for (size_t i = 0; i < 10; ++i) {
+        plate = generator.generatePlate();
+        plates.insert(move(plate));
+        cout << plate << endl;
+    }
+    cout << endl;
+    
+    cout << "unordered_set print" << endl;
+    for (const Plate& plate : plates) {
+        cout << plate << endl;
+    }
+    cout << endl;
+}
+
 int main() {
     PlateGenerator generator;
-    cout << generator.generatePlate() << endl;
+    
+    testSet(generator);
+    
+    testUnorderedSet(generator);
+    
     return 0;
 }
