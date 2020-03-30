@@ -20,11 +20,11 @@ struct Point3D {
     CoordType x;
     CoordType y;
     CoordType z;
+    
+    bool operator==(const Point3D& other) const {
+        return tie(x, y, z) == tie(other.x, other.y, other.z);
+    }
 };
-
-bool operator==(const Point3D& l, const Point3D& r) {
-    return tie(l.x, l.y, l.z) == tie(r.x, r.y, r.z);
-}
 
 struct Point3DHasher {
     
