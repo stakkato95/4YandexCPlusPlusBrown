@@ -166,7 +166,7 @@ void compareSearch(PlateGenerator& generator) {
     cout << duration_cast<milliseconds>(endTime - startTime).count() << " millisec - unordered_set" << endl;
 }
 
-int main() {
+int main6() {
     PlateGenerator generator;
     
 //    testSet(generator);
