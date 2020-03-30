@@ -15,7 +15,11 @@
 
 #include <random>
 
+#include <ctime>
+#include <chrono>
+
 using namespace std;
+using namespace std::chrono;
 
 struct Plate {
     char c1;
@@ -46,7 +50,25 @@ bool operator==(const Plate& l, const Plate& r) {
 
 struct PlateHasher {
     size_t operator()(const Plate& p) const {
-        return p.number;
+        //very simple hash. only for small tables. range of numbers 0 - 1000
+        //with number of elements > 1000 there'll be collisions
+        //return p.number;
+        
+        //for number of elements 0 - 100 000
+        //return p.number * 100 + p.region;
+        
+        //for number of elements 0 - 1 000 000
+        size_t result = p.number * 100 + p.region;
+        
+        int s1 = p.c1 - 'A';
+        int s2 = p.c2 - 'A';
+        int s3 = p.c3 - 'A';
+        int s = (s1 * 100 + s2) * 100 + s3;
+        
+        result *= 1'000'000;
+        result += s;
+        
+        return result;
     }
 };
 
@@ -113,12 +135,43 @@ void testUnorderedSet(PlateGenerator& generator) {
     cout << endl;
 }
 
+void compareSearch(PlateGenerator& generator) {
+    size_t N = 1'000'000;
+    
+    auto startTime = system_clock::now();
+    
+    set<Plate> plates;
+    for (size_t i = 0; i < N; ++i) {
+        plates.insert(generator.generatePlate());
+    }
+    for (size_t i = 0; i < N; ++i) {
+        plates.find(generator.generatePlate());
+    }
+    
+    auto endTime = system_clock::now();
+    cout << duration_cast<milliseconds>(endTime - startTime).count() << " millisec - set" << endl;
+    
+    
+    startTime = system_clock::now();
+    
+    unordered_set<Plate, PlateHasher> platesUnordered;
+    for (size_t i = 0; i < N; ++i) {
+        platesUnordered.insert(generator.generatePlate());
+    }
+    for (size_t i = 0; i < N; ++i) {
+        platesUnordered.find(generator.generatePlate());
+    }
+    
+    endTime = system_clock::now();
+    cout << duration_cast<milliseconds>(endTime - startTime).count() << " millisec - unordered_set" << endl;
+}
+
 int main() {
     PlateGenerator generator;
     
-    testSet(generator);
-    
-    testUnorderedSet(generator);
+//    testSet(generator);
+//    testUnorderedSet(generator);
+    compareSearch(generator);
     
     return 0;
 }
