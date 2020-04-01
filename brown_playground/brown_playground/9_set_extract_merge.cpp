@@ -87,7 +87,7 @@ void showMergeTrees() {
     //s1.merge(s2); //not compiling on mac os
 }
 
-int main() {
+int main9() {
 //    showSetUpdateBadPraxis();
 //    showSetUpdateGoodPraxis();
     showMergeTrees();
