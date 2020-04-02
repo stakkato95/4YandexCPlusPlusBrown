@@ -174,7 +174,7 @@ void TestReplacement() {
     assert(final_body == record->title);
 }
 
-int main() {
+int main11() {
     TestRangeBoundaries();
     TestSameUser();
     TestReplacement();
