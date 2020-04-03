@@ -56,13 +56,15 @@ void TestLoadIni() {
 }
 
 void TestDocument() {
-    Ini::Document doc;
+    using namespace Ini;
+    
+    Document doc;
     assert(doc.SectionCount() == 0u);
 
     // Обратите внимание, как мы используем указатель для работы
     // с последней добавленной секцией. Эта техника может вам пригодиться
     // для реализации функции Load
-    Ini::Section* section = &doc.AddSection("one");
+    Section* section = &doc.AddSection("one");
     assert(doc.SectionCount() == 1u);
 
     section->insert({"name_1", "value_1"});
@@ -77,9 +79,9 @@ void TestDocument() {
     section->insert({"name_1", "value_1"});
 
     assert(doc.SectionCount() == 3u);
-    const Ini::Section expected_one = {{"name_1", "value_1"}, {"name_2", "value_2"}};
-    const Ini::Section expected_two = {{"name_1", "value_1"}, {"name_2", "value_2"}, {"name_3", "value_3"}};
-    const Ini::Section expected_three = {{"name_1", "value_1"}};
+    const Section expected_one = {{"name_1", "value_1"}, {"name_2", "value_2"}};
+    const Section expected_two = {{"name_1", "value_1"}, {"name_2", "value_2"}, {"name_3", "value_3"}};
+    const Section expected_three = {{"name_1", "value_1"}};
 
     assert(doc.GetSection("one") == expected_one);
     assert(doc.GetSection("two") == expected_two);

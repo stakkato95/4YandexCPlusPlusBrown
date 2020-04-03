@@ -10,7 +10,14 @@
 
 using namespace std;
 
-int main() {
+int main14() {
+    //rule of thumb - minimize scope of 'using'
+    //apply it not to the whole file, but to functions, blocks of code etc.
+    //the smaller scope, the better it is
+    
+    //don't use 'using namespace in header files'
+    //because we don't know in advance in which files the header will be included
+    //and what conflicts it can cause
     
     return 0;
 }
