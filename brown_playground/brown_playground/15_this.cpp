@@ -66,7 +66,7 @@ private:
     int* val;
 };
 
-int main() {
+int main15() {
     boxedInt i = boxedInt(3);
     boxedInt j = boxedInt(5);
     

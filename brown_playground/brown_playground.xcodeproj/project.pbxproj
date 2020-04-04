@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		994CBC9E2437675D009EE895 /* 16_optional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 994CBC9D2437675D009EE895 /* 16_optional.cpp */; };
 		997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */; };
 		997B8603243244D300AB2C2D /* 9_set_extract_merge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B8602243244D300AB2C2D /* 9_set_extract_merge.cpp */; };
 		997B860524330F5B00AB2C2D /* 10_assignment_secondary_db_index.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B860424330F5B00AB2C2D /* 10_assignment_secondary_db_index.cpp */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		994CBC9D2437675D009EE895 /* 16_optional.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 16_optional.cpp; sourceTree = "<group>"; };
 		997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 8_assignment_hashing.cpp; sourceTree = "<group>"; };
 		997B8602243244D300AB2C2D /* 9_set_extract_merge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 9_set_extract_merge.cpp; sourceTree = "<group>"; };
 		997B860424330F5B00AB2C2D /* 10_assignment_secondary_db_index.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 10_assignment_secondary_db_index.cpp; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				997B861F2435A3DB00AB2C2D /* 13_ini.h */,
 				99A9AAEE2435B726004BC15D /* 14_using.cpp */,
 				99A9AAF0243755A7004BC15D /* 15_this.cpp */,
+				994CBC9D2437675D009EE895 /* 16_optional.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				99917785243094B300216CE7 /* 4_map_iterators.cpp in Sources */,
 				997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */,
 				997B8603243244D300AB2C2D /* 9_set_extract_merge.cpp in Sources */,
+				994CBC9E2437675D009EE895 /* 16_optional.cpp in Sources */,
 				997B860F2434DC0500AB2C2D /* xml.cpp in Sources */,
 				997B86102434DC0500AB2C2D /* 13_spendings_xml.cpp in Sources */,
 				99FE844F24308A3B005B53C7 /* 3_assignment_hash_set.cpp in Sources */,
