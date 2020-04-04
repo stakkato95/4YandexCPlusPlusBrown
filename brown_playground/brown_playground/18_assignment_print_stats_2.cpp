@@ -162,5 +162,7 @@ int main18() {
             }
         }
     }
+    
+    return 0;
 }
 
