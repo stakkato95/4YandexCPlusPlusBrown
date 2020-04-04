@@ -19,7 +19,7 @@ optional<string> getSomeString(bool isInitialized = true) {
     return nullopt;
 }
 
-int main() {
+int main16() {
     cout << "\"" << *getSomeString() << "\"" << endl;
     cout << "\"" << *getSomeString(false) << "\"" << endl;
     
