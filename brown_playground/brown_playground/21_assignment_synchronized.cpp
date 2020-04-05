@@ -34,7 +34,7 @@ struct ConstAccess {
 template <typename T>
 class Synchronized {
 public:
-    explicit Synchronized(T initial = T()) { }
+    explicit Synchronized(T initial = T()) : value { move(initial) } { }
     
     Access<T> GetAccess() { return { value, lock_guard<mutex>(m) }; }
     ConstAccess<T> GetAccess() const { return { value, lock_guard<mutex>(m) }; }
