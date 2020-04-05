@@ -123,8 +123,10 @@ void TestProducerConsumer() {
     assert(!logs.empty());
 }
 
-int main() {
+int main21() {
     TestConcurrentUpdate();
     TestProducerConsumer();
+    
+    return 0;
 }
 

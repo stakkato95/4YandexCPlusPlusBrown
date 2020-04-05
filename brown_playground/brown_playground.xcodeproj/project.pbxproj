@@ -25,6 +25,7 @@
 		998DAAE22431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998DAAE12431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp */; };
 		99917785243094B300216CE7 /* 4_map_iterators.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99917784243094B300216CE7 /* 4_map_iterators.cpp */; };
 		9997981E2439B67600125885 /* 21_assignment_synchronized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9997981D2439B67600125885 /* 21_assignment_synchronized.cpp */; };
+		999798202439C0B800125885 /* 22_concurrent_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9997981F2439C0B800125885 /* 22_concurrent_map.cpp */; };
 		99A9AAEF2435B726004BC15D /* 14_using.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAEE2435B726004BC15D /* 14_using.cpp */; };
 		99A9AAF1243755A7004BC15D /* 15_this.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAF0243755A7004BC15D /* 15_this.cpp */; };
 		99B640A724386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B640A624386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp */; };
@@ -69,6 +70,7 @@
 		998DAAE12431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 7_set_nested_custom_types.cpp; sourceTree = "<group>"; };
 		99917784243094B300216CE7 /* 4_map_iterators.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 4_map_iterators.cpp; sourceTree = "<group>"; };
 		9997981D2439B67600125885 /* 21_assignment_synchronized.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 21_assignment_synchronized.cpp; sourceTree = "<group>"; };
+		9997981F2439C0B800125885 /* 22_concurrent_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 22_concurrent_map.cpp; sourceTree = "<group>"; };
 		99A9AAEE2435B726004BC15D /* 14_using.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 14_using.cpp; sourceTree = "<group>"; };
 		99A9AAF0243755A7004BC15D /* 15_this.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 15_this.cpp; sourceTree = "<group>"; };
 		99B640A624386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 17_immediatelly_invoked_lambda_expr.cpp; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				99B640AA243895E500B32CE4 /* 19_concurrency_and_const.cpp */,
 				9987E8CD2438981A00E377DC /* 20_const_and_mutable.cpp */,
 				9997981D2439B67600125885 /* 21_assignment_synchronized.cpp */,
+				9997981F2439C0B800125885 /* 22_concurrent_map.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				997B861524359C6500AB2C2D /* json.cpp in Sources */,
 				998C786B2430A81C00A62FA3 /* 6_set_custom_types.cpp in Sources */,
 				998C786924309C2D00A62FA3 /* 5_assignment_set_iterator.cpp in Sources */,
+				999798202439C0B800125885 /* 22_concurrent_map.cpp in Sources */,
 				997B86202435A3DB00AB2C2D /* 13_ini.cpp in Sources */,
 				9987E8CE2438981A00E377DC /* 20_const_and_mutable.cpp in Sources */,
 				997B86092434D9E900AB2C2D /* 12_namespaces.cpp in Sources */,
