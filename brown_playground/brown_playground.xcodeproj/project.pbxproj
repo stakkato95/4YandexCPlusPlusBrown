@@ -28,6 +28,7 @@
 		999798202439C0B800125885 /* 22_concurrent_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9997981F2439C0B800125885 /* 22_concurrent_map.cpp */; };
 		99A9AAEF2435B726004BC15D /* 14_using.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAEE2435B726004BC15D /* 14_using.cpp */; };
 		99A9AAF1243755A7004BC15D /* 15_this.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAF0243755A7004BC15D /* 15_this.cpp */; };
+		99AB4B502439F7CD00479E9B /* 23_const_hack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */; };
 		99B640A724386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B640A624386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp */; };
 		99B640A9243878F800B32CE4 /* 18_assignment_print_stats_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B640A8243878F800B32CE4 /* 18_assignment_print_stats_2.cpp */; };
 		99B640AB243895E500B32CE4 /* 19_concurrency_and_const.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B640AA243895E500B32CE4 /* 19_concurrency_and_const.cpp */; };
@@ -73,6 +74,7 @@
 		9997981F2439C0B800125885 /* 22_concurrent_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 22_concurrent_map.cpp; sourceTree = "<group>"; };
 		99A9AAEE2435B726004BC15D /* 14_using.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 14_using.cpp; sourceTree = "<group>"; };
 		99A9AAF0243755A7004BC15D /* 15_this.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 15_this.cpp; sourceTree = "<group>"; };
+		99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 23_const_hack.cpp; sourceTree = "<group>"; };
 		99B640A624386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 17_immediatelly_invoked_lambda_expr.cpp; sourceTree = "<group>"; };
 		99B640A8243878F800B32CE4 /* 18_assignment_print_stats_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 18_assignment_print_stats_2.cpp; sourceTree = "<group>"; };
 		99B640AA243895E500B32CE4 /* 19_concurrency_and_const.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 19_concurrency_and_const.cpp; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				9987E8CD2438981A00E377DC /* 20_const_and_mutable.cpp */,
 				9997981D2439B67600125885 /* 21_assignment_synchronized.cpp */,
 				9997981F2439C0B800125885 /* 22_concurrent_map.cpp */,
+				99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				99FE8446242F79DB005B53C7 /* 1_head_iterator.h in Sources */,
 				99B640AB243895E500B32CE4 /* 19_concurrency_and_const.cpp in Sources */,
 				99A9AAF1243755A7004BC15D /* 15_this.cpp in Sources */,
+				99AB4B502439F7CD00479E9B /* 23_const_hack.cpp in Sources */,
 				9997981E2439B67600125885 /* 21_assignment_synchronized.cpp in Sources */,
 				99917785243094B300216CE7 /* 4_map_iterators.cpp in Sources */,
 				997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */,
