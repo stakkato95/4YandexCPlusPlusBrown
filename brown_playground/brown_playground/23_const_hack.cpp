@@ -15,7 +15,7 @@
 
 using namespace std;
 
-int main() {
+int main23() {
     string str = "hello world";
     //ref to a const string
     const string& strRef = as_const(str);

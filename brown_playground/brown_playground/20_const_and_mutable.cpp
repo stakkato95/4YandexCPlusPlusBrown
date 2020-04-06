@@ -68,7 +68,8 @@ private:
 int main20() {
     //physical constancy - none bit in object is changed
     //logical constancy - observable state of the object stays is UNchanged
-    //'const' ensures logical constancy
+    //'const' ensures physical constancy (none bit can be changed)
+    //by using 'mutable' developer should ensure logical constancy
     //to change a field inside a const method mark it with 'mutable'
     
     database<string> db;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99463D92243B4706008983B4 /* 24_hashing_integers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99463D91243B4706008983B4 /* 24_hashing_integers.cpp */; };
 		994CBC9E2437675D009EE895 /* 16_optional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 994CBC9D2437675D009EE895 /* 16_optional.cpp */; };
 		997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */; };
 		997B8603243244D300AB2C2D /* 9_set_extract_merge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B8602243244D300AB2C2D /* 9_set_extract_merge.cpp */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		99463D91243B4706008983B4 /* 24_hashing_integers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 24_hashing_integers.cpp; sourceTree = "<group>"; };
 		994CBC9D2437675D009EE895 /* 16_optional.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 16_optional.cpp; sourceTree = "<group>"; };
 		997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 8_assignment_hashing.cpp; sourceTree = "<group>"; };
 		997B8602243244D300AB2C2D /* 9_set_extract_merge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 9_set_extract_merge.cpp; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				9997981D2439B67600125885 /* 21_assignment_synchronized.cpp */,
 				9997981F2439C0B800125885 /* 22_concurrent_map.cpp */,
 				99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */,
+				99463D91243B4706008983B4 /* 24_hashing_integers.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FE8446242F79DB005B53C7 /* 1_head_iterator.h in Sources */,
+				99463D92243B4706008983B4 /* 24_hashing_integers.cpp in Sources */,
 				99B640AB243895E500B32CE4 /* 19_concurrency_and_const.cpp in Sources */,
 				99A9AAF1243755A7004BC15D /* 15_this.cpp in Sources */,
 				99AB4B502439F7CD00479E9B /* 23_const_hack.cpp in Sources */,
