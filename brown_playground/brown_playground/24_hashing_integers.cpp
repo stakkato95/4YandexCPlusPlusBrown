@@ -16,22 +16,11 @@
 
 using namespace std;
 
-class integer_hasher {
-public:
-    explicit integer_hasher(size_t digitsMaxLength) {
-        
-    }
-private:
+template<int PhoneNumberLength = 19>
+struct PhoneNumberHasher {
     size_t p;
     size_t a;
     size_t b;
-};
-
-class phones_unordered_map {
-public:
-    explicit phones_unordered_map(size_t digitsMaxLength) {
-        
-    }
 };
 
 int main24() {
