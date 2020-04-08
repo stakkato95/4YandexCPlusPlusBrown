@@ -303,7 +303,7 @@ void TestNonconstAccess() {
     }
 }
 
-int main() {
+int main25() {
     TestCreation();
     TestEqualComparability();
     TestAddition();
