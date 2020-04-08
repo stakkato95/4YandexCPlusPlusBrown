@@ -6,4 +6,33 @@
 //  Copyright © 2020 Artsiom Kaliaha. All rights reserved.
 //
 
-#include <stdio.h>
+#include <iostream>
+#include <memory>
+
+using namespace std;
+
+struct Actor {
+    Actor() { cout << "created" << endl; }
+    ~Actor() { cout << "deleted" << endl; }
+    void doWork() { cout << "work" << endl; }
+};
+
+void runActor(Actor* ptr) {
+    if (ptr) {
+        ptr->doWork();
+    } else {
+        cout << "Actor war expected" << endl;
+    }
+}
+
+int main27() {
+    unique_ptr<Actor> ptr = make_unique<Actor>();
+    runActor(ptr.get());
+    
+    cout << endl << "moved" << endl;
+    unique_ptr<Actor> ptr1 = move(ptr);
+    runActor(ptr1.get());
+    runActor(ptr.get());
+    
+    return 0;
+}
