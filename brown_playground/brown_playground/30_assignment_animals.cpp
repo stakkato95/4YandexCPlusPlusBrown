@@ -64,6 +64,7 @@ void TestZoo() {
     assert(output.str() == expected);
 }
 
-int main() {
+int main30() {
     TestZoo();
+    return 0;
 }
