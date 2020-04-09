@@ -40,6 +40,7 @@
 		99B640AB243895E500B32CE4 /* 19_concurrency_and_const.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B640AA243895E500B32CE4 /* 19_concurrency_and_const.cpp */; };
 		99DCF5A5243DDF54006E2701 /* 30_assignment_animals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99DCF5A3243DDF54006E2701 /* 30_assignment_animals.cpp */; };
 		99DCF5A7243DE6DB006E2701 /* 31_assignment_pipeline_builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99DCF5A6243DE6DB006E2701 /* 31_assignment_pipeline_builder.cpp */; };
+		99DCF5A9243EFDFE006E2701 /* 32_obj_pool_unique_ptr_unordered_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99DCF5A8243EFDFE006E2701 /* 32_obj_pool_unique_ptr_unordered_map.cpp */; };
 		99FE8446242F79DB005B53C7 /* 1_head_iterator.h in Sources */ = {isa = PBXBuildFile; fileRef = 99FE8445242F79DB005B53C7 /* 1_head_iterator.h */; };
 		99FE844D242F7E2F005B53C7 /* 2_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99FE844C242F7E2F005B53C7 /* 2_map.cpp */; };
 		99FE844F24308A3B005B53C7 /* 3_assignment_hash_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99FE844E24308A3B005B53C7 /* 3_assignment_hash_set.cpp */; };
@@ -95,6 +96,7 @@
 		99DCF5A3243DDF54006E2701 /* 30_assignment_animals.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 30_assignment_animals.cpp; sourceTree = "<group>"; };
 		99DCF5A4243DDF54006E2701 /* 30_assignment_animals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 30_assignment_animals.h; sourceTree = "<group>"; };
 		99DCF5A6243DE6DB006E2701 /* 31_assignment_pipeline_builder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 31_assignment_pipeline_builder.cpp; sourceTree = "<group>"; };
+		99DCF5A8243EFDFE006E2701 /* 32_obj_pool_unique_ptr_unordered_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 32_obj_pool_unique_ptr_unordered_map.cpp; sourceTree = "<group>"; };
 		99FE8442242F79DB005B53C7 /* brown_playground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = brown_playground; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FE8445242F79DB005B53C7 /* 1_head_iterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 1_head_iterator.h; sourceTree = "<group>"; };
 		99FE844C242F7E2F005B53C7 /* 2_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2_map.cpp; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				99DCF5A3243DDF54006E2701 /* 30_assignment_animals.cpp */,
 				99DCF5A4243DDF54006E2701 /* 30_assignment_animals.h */,
 				99DCF5A6243DE6DB006E2701 /* 31_assignment_pipeline_builder.cpp */,
+				99DCF5A8243EFDFE006E2701 /* 32_obj_pool_unique_ptr_unordered_map.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				998250EA243DD02F003B33D1 /* 28_obj_pool_with_unique_ptr.cpp in Sources */,
 				99AB4B502439F7CD00479E9B /* 23_const_hack.cpp in Sources */,
 				998250EC243DD9EF003B33D1 /* 29_obj_pool_unique_ptr_compare.cpp in Sources */,
+				99DCF5A9243EFDFE006E2701 /* 32_obj_pool_unique_ptr_unordered_map.cpp in Sources */,
 				9997981E2439B67600125885 /* 21_assignment_synchronized.cpp in Sources */,
 				99917785243094B300216CE7 /* 4_map_iterators.cpp in Sources */,
 				997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */,
