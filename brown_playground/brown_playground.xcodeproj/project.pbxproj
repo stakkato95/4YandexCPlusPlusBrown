@@ -36,6 +36,8 @@
 		99A9AAF1243755A7004BC15D /* 15_this.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAF0243755A7004BC15D /* 15_this.cpp */; };
 		99AB4B502439F7CD00479E9B /* 23_const_hack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */; };
 		99B4B222243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B4B221243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp */; };
+		99B4B224243F0BC7001BF293 /* 35_lru_cache_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B4B223243F0BC7001BF293 /* 35_lru_cache_main.cpp */; };
+		99B4B227243F0D1D001BF293 /* 35_lru_cache_Solution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B4B226243F0D1D001BF293 /* 35_lru_cache_Solution.cpp */; };
 		99B640A724386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B640A624386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp */; };
 		99B640A9243878F800B32CE4 /* 18_assignment_print_stats_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B640A8243878F800B32CE4 /* 18_assignment_print_stats_2.cpp */; };
 		99B640AB243895E500B32CE4 /* 19_concurrency_and_const.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B640AA243895E500B32CE4 /* 19_concurrency_and_const.cpp */; };
@@ -93,6 +95,9 @@
 		99A9AAF0243755A7004BC15D /* 15_this.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 15_this.cpp; sourceTree = "<group>"; };
 		99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 23_const_hack.cpp; sourceTree = "<group>"; };
 		99B4B221243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 34_thread_safe_shared_ptr.cpp; sourceTree = "<group>"; };
+		99B4B223243F0BC7001BF293 /* 35_lru_cache_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 35_lru_cache_main.cpp; sourceTree = "<group>"; };
+		99B4B225243F0CDF001BF293 /* 35_lru_cache_Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 35_lru_cache_Common.h; sourceTree = "<group>"; };
+		99B4B226243F0D1D001BF293 /* 35_lru_cache_Solution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 35_lru_cache_Solution.cpp; sourceTree = "<group>"; };
 		99B640A624386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 17_immediatelly_invoked_lambda_expr.cpp; sourceTree = "<group>"; };
 		99B640A8243878F800B32CE4 /* 18_assignment_print_stats_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 18_assignment_print_stats_2.cpp; sourceTree = "<group>"; };
 		99B640AA243895E500B32CE4 /* 19_concurrency_and_const.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 19_concurrency_and_const.cpp; sourceTree = "<group>"; };
@@ -196,6 +201,9 @@
 				99DCF5A8243EFDFE006E2701 /* 32_obj_pool_unique_ptr_unordered_map.cpp */,
 				99DCF5AA243F04F3006E2701 /* 33_unique_ptr_deletion.cpp */,
 				99B4B221243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp */,
+				99B4B223243F0BC7001BF293 /* 35_lru_cache_main.cpp */,
+				99B4B225243F0CDF001BF293 /* 35_lru_cache_Common.h */,
+				99B4B226243F0D1D001BF293 /* 35_lru_cache_Solution.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -284,9 +292,11 @@
 				998C786924309C2D00A62FA3 /* 5_assignment_set_iterator.cpp in Sources */,
 				999798202439C0B800125885 /* 22_concurrent_map.cpp in Sources */,
 				998250E8243DC989003B33D1 /* 27_unique_ptr.cpp in Sources */,
+				99B4B227243F0D1D001BF293 /* 35_lru_cache_Solution.cpp in Sources */,
 				997B86202435A3DB00AB2C2D /* 13_ini.cpp in Sources */,
 				998250E6243DBA2D003B33D1 /* 26_assignment_object_pool.cpp in Sources */,
 				9987E8CE2438981A00E377DC /* 20_const_and_mutable.cpp in Sources */,
+				99B4B224243F0BC7001BF293 /* 35_lru_cache_main.cpp in Sources */,
 				997B86092434D9E900AB2C2D /* 12_namespaces.cpp in Sources */,
 				997B860524330F5B00AB2C2D /* 10_assignment_secondary_db_index.cpp in Sources */,
 				99DCF5A5243DDF54006E2701 /* 30_assignment_animals.cpp in Sources */,

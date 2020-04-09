@@ -18,7 +18,7 @@ struct Data {
     Data(string s) : data { s } { }
 };
 
-int main() {
+int main34() {
     //shared_ptr is by default thread safe (incremeanting reference count)
     //shared_ptr can have a pointer to a const object. good for concurrency
     
