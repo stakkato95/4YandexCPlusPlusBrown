@@ -31,7 +31,7 @@ private:
 };
 
 
-int main() {
+int main37() {
     try {
         File();
     } catch (const runtime_error& e) {
