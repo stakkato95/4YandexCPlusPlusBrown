@@ -45,9 +45,11 @@ public:
     }
     
     void Deallocate(T* object) {
-        unique_ptr<T> ptr = unique_ptr<T>(object);
+        unique_ptr<T> ptr = unique_ptr<T>(object); //create ptr only for the purpose fo comparison
+        // if find throws an exception, 'ptr' will release 'object' and unique_ptr to 'object' in 'allocated'
+        //will try to delete it 2nd time => exception
         typename unordered_set<unique_ptr<T>>::iterator it = allocated.find(ptr);
-        ptr.release();
+        ptr.release(); //ptr doesn't point to object any more
         
         if (it == end(allocated)) {
             throw invalid_argument("unknown object");
