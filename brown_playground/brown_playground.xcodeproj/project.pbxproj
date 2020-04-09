@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		992A94C0243F350C00126870 /* 36_non_owning_shared_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */; };
 		99463D92243B4706008983B4 /* 24_hashing_integers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99463D91243B4706008983B4 /* 24_hashing_integers.cpp */; };
 		994CBC9E2437675D009EE895 /* 16_optional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 994CBC9D2437675D009EE895 /* 16_optional.cpp */; };
 		997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 36_non_owning_shared_ptr.cpp; sourceTree = "<group>"; };
 		99463D91243B4706008983B4 /* 24_hashing_integers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 24_hashing_integers.cpp; sourceTree = "<group>"; };
 		994CBC9D2437675D009EE895 /* 16_optional.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 16_optional.cpp; sourceTree = "<group>"; };
 		997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 8_assignment_hashing.cpp; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				99B4B223243F0BC7001BF293 /* 35_lru_cache_main.cpp */,
 				99B4B225243F0CDF001BF293 /* 35_lru_cache_Common.h */,
 				99B4B226243F0D1D001BF293 /* 35_lru_cache_Solution.cpp */,
+				992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				99FE844D242F7E2F005B53C7 /* 2_map.cpp in Sources */,
 				998DAAE22431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp in Sources */,
 				99B4B222243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp in Sources */,
+				992A94C0243F350C00126870 /* 36_non_owning_shared_ptr.cpp in Sources */,
 				99A9AAEF2435B726004BC15D /* 14_using.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
