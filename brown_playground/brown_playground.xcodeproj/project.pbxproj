@@ -36,6 +36,7 @@
 		99A9AAEF2435B726004BC15D /* 14_using.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAEE2435B726004BC15D /* 14_using.cpp */; };
 		99A9AAF1243755A7004BC15D /* 15_this.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAF0243755A7004BC15D /* 15_this.cpp */; };
 		99AB4B502439F7CD00479E9B /* 23_const_hack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */; };
+		99B243F5243F4B9100159108 /* 37_raii_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B243F4243F4B9100159108 /* 37_raii_test.cpp */; };
 		99B4B222243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B4B221243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp */; };
 		99B4B224243F0BC7001BF293 /* 35_lru_cache_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B4B223243F0BC7001BF293 /* 35_lru_cache_main.cpp */; };
 		99B4B227243F0D1D001BF293 /* 35_lru_cache_Solution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B4B226243F0D1D001BF293 /* 35_lru_cache_Solution.cpp */; };
@@ -96,6 +97,7 @@
 		99A9AAEE2435B726004BC15D /* 14_using.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 14_using.cpp; sourceTree = "<group>"; };
 		99A9AAF0243755A7004BC15D /* 15_this.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 15_this.cpp; sourceTree = "<group>"; };
 		99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 23_const_hack.cpp; sourceTree = "<group>"; };
+		99B243F4243F4B9100159108 /* 37_raii_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 37_raii_test.cpp; sourceTree = "<group>"; };
 		99B4B221243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 34_thread_safe_shared_ptr.cpp; sourceTree = "<group>"; };
 		99B4B223243F0BC7001BF293 /* 35_lru_cache_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 35_lru_cache_main.cpp; sourceTree = "<group>"; };
 		99B4B225243F0CDF001BF293 /* 35_lru_cache_Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 35_lru_cache_Common.h; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				99B4B225243F0CDF001BF293 /* 35_lru_cache_Common.h */,
 				99B4B226243F0D1D001BF293 /* 35_lru_cache_Solution.cpp */,
 				992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */,
+				99B243F4243F4B9100159108 /* 37_raii_test.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				99917785243094B300216CE7 /* 4_map_iterators.cpp in Sources */,
 				997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */,
 				997B8603243244D300AB2C2D /* 9_set_extract_merge.cpp in Sources */,
+				99B243F5243F4B9100159108 /* 37_raii_test.cpp in Sources */,
 				994CBC9E2437675D009EE895 /* 16_optional.cpp in Sources */,
 				99DCF5AB243F04F3006E2701 /* 33_unique_ptr_deletion.cpp in Sources */,
 				997B860F2434DC0500AB2C2D /* xml.cpp in Sources */,
