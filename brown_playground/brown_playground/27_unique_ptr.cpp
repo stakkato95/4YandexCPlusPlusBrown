@@ -11,21 +11,26 @@
 
 using namespace std;
 
-struct Actor {
-    Actor() { cout << "created" << endl; }
-    ~Actor() { cout << "deleted" << endl; }
-    void doWork() { cout << "work" << endl; }
-};
-
-void runActor(Actor* ptr) {
-    if (ptr) {
-        ptr->doWork();
-    } else {
-        cout << "Actor war expected" << endl;
+namespace actor {
+    
+    struct Actor {
+        Actor() { cout << "created" << endl; }
+        ~Actor() { cout << "deleted" << endl; }
+        void doWork() { cout << "work" << endl; }
+    };
+    
+    void runActor(Actor* ptr) {
+        if (ptr) {
+            ptr->doWork();
+        } else {
+            cout << "Actor war expected" << endl;
+        }
     }
 }
 
 int main27() {
+    using namespace actor;
+    
     unique_ptr<Actor> ptr = make_unique<Actor>();
     runActor(ptr.get());
     
