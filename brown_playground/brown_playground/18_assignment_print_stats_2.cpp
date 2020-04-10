@@ -20,94 +20,99 @@
 using namespace std;
 using namespace std::chrono;
 
-template <typename Iterator>
-class IteratorRange {
-public:
-    IteratorRange(Iterator begin, Iterator end) : first(begin), last(end) { }
+namespace stats {
     
-    Iterator begin() const { return first; }
+    template <typename Iterator>
+    class IteratorRange {
+    public:
+        IteratorRange(Iterator begin, Iterator end) : first(begin), last(end) { }
+        
+        Iterator begin() const { return first; }
+        
+        Iterator end() const { return last; }
+        
+    private:
+        Iterator first, last;
+    };
     
-    Iterator end() const { return last; }
+    template <typename Collection>
+    auto Head(Collection& v, size_t top) {
+        return IteratorRange{v.begin(), next(v.begin(), min(top, v.size()))};
+    }
     
-private:
-    Iterator first, last;
-};
-
-template <typename Collection>
-auto Head(Collection& v, size_t top) {
-    return IteratorRange{v.begin(), next(v.begin(), min(top, v.size()))};
-}
-
-struct Person {
-    string name;
-    int age, income;
-    bool is_male;
-};
-
-ostream& operator<<(ostream& os, const Person& p) {
-    os
-    << "[ name=" << p.name
-    << ", age=" << p.age
-    << ", income=" << p.income
-    << ", is_male=" << p.is_male
-    << " ]";
-    return os;
-}
-
-vector<Person> ReadPeople(istream& input) {
-    int count;
-    input >> count;
+    struct Person {
+        string name;
+        int age, income;
+        bool is_male;
+    };
     
-    vector<Person> result(count);
-    for (Person& p : result) {
+    ostream& operator<<(ostream& os, const Person& p) {
+        os
+        << "[ name=" << p.name
+        << ", age=" << p.age
+        << ", income=" << p.income
+        << ", is_male=" << p.is_male
+        << " ]";
+        return os;
+    }
+    
+    vector<Person> ReadPeople(istream& input) {
+        int count;
+        input >> count;
+        
+        vector<Person> result(count);
+        for (Person& p : result) {
+            char gender;
+            input >> p.name >> p.age >> p.income >> gender;
+            p.is_male = gender == 'M';
+        }
+        
+        return result;
+    }
+    
+    
+    
+    vector<Person> ReadPeopleTest() {
+        string input = R"(Ivan 25 1000 M
+        Olga 30 623 W
+        Sergey 24 825 M
+        Maria 42 1254 W
+        Mikhail 15 215 M
+        Oleg 18 230 M
+        Denis 53 8965 M
+        Denis 53 8965 M
+        Denis 53 8965 M
+        Maxim 37 9050 M
+        Ivan 47 19050 M
+        Ivan 17 50 M
+        Olga 23 550 W
+        )";
+        
+        istringstream is(input);
+        
+        string name;
+        int age;
+        int income;
         char gender;
-        input >> p.name >> p.age >> p.income >> gender;
-        p.is_male = gender == 'M';
+        
+        vector<Person> result;
+        while (!is.eof()) {
+            is >> name;
+            is >> age;
+            is >> income;
+            is >> gender;
+            result.push_back({ name, age, income, gender == 'M' });
+        }
+        
+        return result;
     }
-    
-    return result;
-}
-
-
-
-vector<Person> ReadPeopleTest() {
-    string input = R"(Ivan 25 1000 M
-    Olga 30 623 W
-    Sergey 24 825 M
-    Maria 42 1254 W
-    Mikhail 15 215 M
-    Oleg 18 230 M
-    Denis 53 8965 M
-    Denis 53 8965 M
-    Denis 53 8965 M
-    Maxim 37 9050 M
-    Ivan 47 19050 M
-    Ivan 17 50 M
-    Olga 23 550 W
-    )";
-    
-    istringstream is(input);
-    
-    string name;
-    int age;
-    int income;
-    char gender;
-    
-    vector<Person> result;
-    while (!is.eof()) {
-        is >> name;
-        is >> age;
-        is >> income;
-        is >> gender;
-        result.push_back({ name, age, income, gender == 'M' });
-    }
-    
-    return result;
 }
 
 int main18() {
+    using namespace stats;
+    
     vector<Person> people = ReadPeopleTest();
-//    vector<Person> people = ReadPeople(cin);
+    //    vector<Person> people = ReadPeople(cin);
     
     sort(begin(people), end(people), [](const Person& lhs, const Person& rhs) { return lhs.age < rhs.age; });
     

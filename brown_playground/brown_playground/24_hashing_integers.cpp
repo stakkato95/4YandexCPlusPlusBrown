@@ -78,7 +78,7 @@ struct StringHasher : public IntHasher<intLength, mapSize> {
 };
 
 
-int main() {
+int main24() {
     //Assignment statement
     //You have a mapping of phone numbers of format 999-99-99 to name of contacts.
     //Implement hashing of integers in the most effective way.

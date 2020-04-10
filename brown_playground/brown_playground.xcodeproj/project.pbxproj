@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		992A94C0243F350C00126870 /* 36_non_owning_shared_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */; };
+		993BD933244041A40084566A /* 39_assignment_demographics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993BD932244041A40084566A /* 39_assignment_demographics.cpp */; };
 		99463D92243B4706008983B4 /* 24_hashing_integers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99463D91243B4706008983B4 /* 24_hashing_integers.cpp */; };
 		994CBC9E2437675D009EE895 /* 16_optional.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 994CBC9D2437675D009EE895 /* 16_optional.cpp */; };
 		997B86012431C65A00AB2C2D /* 8_assignment_hashing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 36_non_owning_shared_ptr.cpp; sourceTree = "<group>"; };
+		993BD932244041A40084566A /* 39_assignment_demographics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 39_assignment_demographics.cpp; sourceTree = "<group>"; };
 		99463D91243B4706008983B4 /* 24_hashing_integers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 24_hashing_integers.cpp; sourceTree = "<group>"; };
 		994CBC9D2437675D009EE895 /* 16_optional.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 16_optional.cpp; sourceTree = "<group>"; };
 		997B86002431C65A00AB2C2D /* 8_assignment_hashing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 8_assignment_hashing.cpp; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */,
 				99B243F4243F4B9100159108 /* 37_raii_test.cpp */,
 				99937E67243F4FEB00CEC000 /* 38_assignment_unique_ptr.cpp */,
+				993BD932244041A40084566A /* 39_assignment_demographics.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				997B86092434D9E900AB2C2D /* 12_namespaces.cpp in Sources */,
 				997B860524330F5B00AB2C2D /* 10_assignment_secondary_db_index.cpp in Sources */,
 				99DCF5A5243DDF54006E2701 /* 30_assignment_animals.cpp in Sources */,
+				993BD933244041A40084566A /* 39_assignment_demographics.cpp in Sources */,
 				997B861B2435A34700AB2C2D /* 13_assignment_namespaces.cpp in Sources */,
 				99FE844D242F7E2F005B53C7 /* 2_map.cpp in Sources */,
 				998DAAE22431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp in Sources */,
