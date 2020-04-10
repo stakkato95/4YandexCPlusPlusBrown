@@ -10,7 +10,7 @@
 
 using namespace std;
 
-namespace RankDisjointset {
+namespace RankDisjointSet {
     
     class DisjointSet {
     public:
@@ -106,7 +106,7 @@ int main41() {
     //if we don't use 'path compression' in the worst case a disjoint set could look like a linked list, i.e. a single chain of elements
     //'path compression' ensures max length of 2
     
-    RankDisjointset::DisjointSet ds(6);
+    RankDisjointSet::DisjointSet ds(6);
     ds.unionOf(0, 2);
     ds.unionOf(4, 2);
     ds.unionOf(3, 1);
