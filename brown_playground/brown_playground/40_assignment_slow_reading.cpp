@@ -86,7 +86,7 @@ void start(istream& is) {
     }
 }
 
-int main() {
+int main40() {
     // Для ускорения чтения данных отключается синхронизация
     // cin и cout с stdio,
     // а также выполняется отвязка cin от cout

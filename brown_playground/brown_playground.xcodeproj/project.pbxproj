@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99272C4324407D62005B411E /* 41_disjoint_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99272C4224407D62005B411E /* 41_disjoint_set.cpp */; };
 		992A94C0243F350C00126870 /* 36_non_owning_shared_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */; };
 		993BD933244041A40084566A /* 39_assignment_demographics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 993BD932244041A40084566A /* 39_assignment_demographics.cpp */; };
 		99463D92243B4706008983B4 /* 24_hashing_integers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99463D91243B4706008983B4 /* 24_hashing_integers.cpp */; };
@@ -68,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		99272C4224407D62005B411E /* 41_disjoint_set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 41_disjoint_set.cpp; sourceTree = "<group>"; };
 		992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 36_non_owning_shared_ptr.cpp; sourceTree = "<group>"; };
 		993BD932244041A40084566A /* 39_assignment_demographics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 39_assignment_demographics.cpp; sourceTree = "<group>"; };
 		99463D91243B4706008983B4 /* 24_hashing_integers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 24_hashing_integers.cpp; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				99937E67243F4FEB00CEC000 /* 38_assignment_unique_ptr.cpp */,
 				993BD932244041A40084566A /* 39_assignment_demographics.cpp */,
 				997D01BF24404E2B00ECF2D3 /* 40_assignment_slow_reading.cpp */,
+				99272C4224407D62005B411E /* 41_disjoint_set.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				99463D92243B4706008983B4 /* 24_hashing_integers.cpp in Sources */,
 				99B640AB243895E500B32CE4 /* 19_concurrency_and_const.cpp in Sources */,
 				99937E68243F4FEB00CEC000 /* 38_assignment_unique_ptr.cpp in Sources */,
+				99272C4324407D62005B411E /* 41_disjoint_set.cpp in Sources */,
 				99A9AAF1243755A7004BC15D /* 15_this.cpp in Sources */,
 				998250EA243DD02F003B33D1 /* 28_obj_pool_with_unique_ptr.cpp in Sources */,
 				99AB4B502439F7CD00479E9B /* 23_const_hack.cpp in Sources */,
