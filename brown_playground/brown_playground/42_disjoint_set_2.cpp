@@ -14,13 +14,14 @@ using namespace std;
 
 namespace CompactDisjointSet {
     
+    //keep the height of the tree as small as possible
     class UnionByHeightDisjointSet {
     public:
         UnionByHeightDisjointSet(size_t setSize) : size { setSize } {
-            parent = new int[setSize];
+            parent = new int[size];
             //at the very beginning each element is in a set of its own (single element set)
             //-1 also denotes, that the height of the tree is 0
-            memset(parent, ROOT, setSize * sizeof(int));
+            memset(parent, ROOT, size * sizeof(int));
         }
         
         int find(int i) {
@@ -90,15 +91,87 @@ namespace CompactDisjointSet {
             parent[i]--;
         }
     };
+    
+    
+    //minimize the number of node, that increase in height
+    class UnionBySizeDisjointSet {
+    public:
+        UnionBySizeDisjointSet(size_t setSize) : size { setSize } {
+            parent = new int[size];
+            memset(parent, ROOT, size * sizeof(int));
+        }
+        
+        int find(int i) {
+            if (parent[i] < 0) {
+                return i;
+            }
+            
+            if (i != parent[i]) {
+                parent[i] = find(parent[i]);
+            }
+            
+            return parent[i];
+        }
+        
+        void unionOf(int x, int y) {
+            int xParent = find(x);
+            int yParent = find(y);
+            
+            int xSize = getSize(x);
+            int ySize = getSize(y);
+            if (xSize > ySize) {
+                parent[yParent] = xParent;
+                increaseSize(xParent, ySize);
+            } else {
+                parent[xParent] = yParent;
+                increaseSize(yParent, xSize);
+            }
+            
+            printState();
+        }
+        
+    private:
+        static const int ROOT = -1;
+        
+        int* parent;
+        size_t size;
+        
+        int getSize(int i) {
+            return abs(parent[i] + 1);
+        }
+        
+        void increaseSize(int i, int addedTreeHeight) {
+            parent[i] = parent[i] - 1 - addedTreeHeight;
+        }
+        
+        void printState() {
+            for (size_t i = 0; i < size; ++i) {
+                cout << setw(2) << parent[i] << " ";
+            }
+            cout << endl;
+        }
+    };
 }
 
-int main42() {
-    CompactDisjointSet::UnionByHeightDisjointSet ds(6);
-    ds.unionOf(0, 2);
-    ds.unionOf(4, 2);
-    ds.unionOf(3, 1);
-    ds.unionOf(5, 0);
-    ds.unionOf(1, 5);
+int main() {
+    //two techniques don't have difference, if path compression is used!
+    {
+        CompactDisjointSet::UnionByHeightDisjointSet ds(7);
+        ds.unionOf(0, 2);
+        ds.unionOf(4, 2);
+        ds.unionOf(3, 1);
+        ds.unionOf(5, 0);
+        ds.unionOf(1, 5);
+    }
+    cout << endl;
+    {
+        CompactDisjointSet::UnionBySizeDisjointSet ds(7);
+        ds.unionOf(0, 2);
+        ds.unionOf(4, 2);
+        ds.unionOf(3, 1);
+        ds.unionOf(5, 0);
+        ds.unionOf(1, 5);
+    }
     
     return 0;
 }
