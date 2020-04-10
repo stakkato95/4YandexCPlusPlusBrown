@@ -39,6 +39,7 @@
 		999798202439C0B800125885 /* 22_concurrent_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9997981F2439C0B800125885 /* 22_concurrent_map.cpp */; };
 		99A9AAEF2435B726004BC15D /* 14_using.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAEE2435B726004BC15D /* 14_using.cpp */; };
 		99A9AAF1243755A7004BC15D /* 15_this.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99A9AAF0243755A7004BC15D /* 15_this.cpp */; };
+		99AA29822440C1F700D1B584 /* 42_disjoint_set_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99AA29812440C1F700D1B584 /* 42_disjoint_set_2.cpp */; };
 		99AB4B502439F7CD00479E9B /* 23_const_hack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */; };
 		99B243F5243F4B9100159108 /* 37_raii_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B243F4243F4B9100159108 /* 37_raii_test.cpp */; };
 		99B4B222243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B4B221243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp */; };
@@ -104,6 +105,7 @@
 		9997981F2439C0B800125885 /* 22_concurrent_map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 22_concurrent_map.cpp; sourceTree = "<group>"; };
 		99A9AAEE2435B726004BC15D /* 14_using.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 14_using.cpp; sourceTree = "<group>"; };
 		99A9AAF0243755A7004BC15D /* 15_this.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 15_this.cpp; sourceTree = "<group>"; };
+		99AA29812440C1F700D1B584 /* 42_disjoint_set_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 42_disjoint_set_2.cpp; sourceTree = "<group>"; };
 		99AB4B4F2439F7CD00479E9B /* 23_const_hack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 23_const_hack.cpp; sourceTree = "<group>"; };
 		99B243F4243F4B9100159108 /* 37_raii_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 37_raii_test.cpp; sourceTree = "<group>"; };
 		99B4B221243F099B001BF293 /* 34_thread_safe_shared_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 34_thread_safe_shared_ptr.cpp; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				993BD932244041A40084566A /* 39_assignment_demographics.cpp */,
 				997D01BF24404E2B00ECF2D3 /* 40_assignment_slow_reading.cpp */,
 				99272C4224407D62005B411E /* 41_disjoint_set.cpp */,
+				99AA29812440C1F700D1B584 /* 42_disjoint_set_2.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				997B861524359C6500AB2C2D /* json.cpp in Sources */,
 				998C786B2430A81C00A62FA3 /* 6_set_custom_types.cpp in Sources */,
 				998250E3243DAD62003B33D1 /* 25_assignment_polynomial.cpp in Sources */,
+				99AA29822440C1F700D1B584 /* 42_disjoint_set_2.cpp in Sources */,
 				99DCF5A7243DE6DB006E2701 /* 31_assignment_pipeline_builder.cpp in Sources */,
 				998C786924309C2D00A62FA3 /* 5_assignment_set_iterator.cpp in Sources */,
 				999798202439C0B800125885 /* 22_concurrent_map.cpp in Sources */,
