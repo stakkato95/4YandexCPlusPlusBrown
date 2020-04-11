@@ -12,6 +12,7 @@
 #include <cmath>
 #include <limits>
 #include <stdexcept>
+#include <vector>
 
 using namespace std;
 
@@ -166,7 +167,7 @@ namespace express {
     };
 }
 
-int main() {
+int main43() {
     express::ExpressScheduler scheduler(-2, 11);
     scheduler.addConnection(-2, 5);
     scheduler.addConnection(10, 4);
@@ -183,6 +184,8 @@ int main() {
 //    ds.unionOf(10, 4);
 //    ds.unionOf(5, 8);
     
+    vector<int> v { 1 };
+    cout << boolalpha << (lower_bound(begin(v), end(v), 100) == end(v)) << endl;
     
     return 0;
 }
