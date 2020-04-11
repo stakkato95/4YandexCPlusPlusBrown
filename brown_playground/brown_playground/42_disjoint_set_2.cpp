@@ -153,10 +153,10 @@ namespace CompactDisjointSet {
     };
 }
 
-int main() {
+int main42() {
     //two techniques don't have difference, if path compression is used!
     {
-        CompactDisjointSet::UnionByHeightDisjointSet ds(7);
+        CompactDisjointSet::UnionByHeightDisjointSet ds(6);
         ds.unionOf(0, 2);
         ds.unionOf(4, 2);
         ds.unionOf(3, 1);
@@ -165,7 +165,7 @@ int main() {
     }
     cout << endl;
     {
-        CompactDisjointSet::UnionBySizeDisjointSet ds(7);
+        CompactDisjointSet::UnionBySizeDisjointSet ds(6);
         ds.unionOf(0, 2);
         ds.unionOf(4, 2);
         ds.unionOf(3, 1);
