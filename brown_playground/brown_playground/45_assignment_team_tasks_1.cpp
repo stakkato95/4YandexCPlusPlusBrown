@@ -26,27 +26,63 @@ enum class TaskStatus {
 // позволяющего хранить количество задач каждого статуса
 using TasksInfo = map<TaskStatus, int>;
 
+TaskStatus nextStatus(TaskStatus status) {
+    return static_cast<TaskStatus>(static_cast<int>(status) + 1);
+}
+
 class TeamTasks {
 public:
     // Получить статистику по статусам задач конкретного разработчика
     const TasksInfo GetPersonTasksInfo(const string& person) const {
-        
-        
-        return {};
+        return tasks.at(person);
     }
     
     // Добавить новую задачу (в статусе NEW) для конкретного разработчитка
     void AddNewTask(const string& person) {
-        
+        tasks[person][TaskStatus::NEW]++;
     }
     
     // Обновить статусы по данному количеству задач конкретного разработчика,
     // подробности см. ниже
     tuple<TasksInfo, TasksInfo> PerformPersonTasks(const string& person, int task_count) {
-        return { };
+        TasksInfo& personTasks = tasks[person];
+        
+        TasksInfo updated;
+        for (TaskStatus status = TaskStatus::NEW; status != TaskStatus::DONE; status = nextStatus(status)) {
+            int updateCount = min(personTasks[status], task_count);
+            updated[nextStatus(status)] = updateCount;
+            task_count -= updateCount;
+        }
+        
+        TasksInfo untouched;
+        for (TaskStatus status = TaskStatus::NEW; status != TaskStatus::DONE; status = nextStatus(status)) {
+            untouched[status] = personTasks[status] - updated[nextStatus(status)];
+            personTasks[status] += updated[status] - updated[nextStatus(status)];
+        }
+        
+        personTasks[TaskStatus::DONE] += updated[TaskStatus::DONE];
+        
+        removeZeros(updated);
+        removeZeros(personTasks);
+            
+        return { updated, untouched };
     }
 private:
-    map<string, vector<TaskStatus>> tasks;
+    void removeZeros(TasksInfo& t) {
+        vector<TaskStatus> statusesToDelete;
+        
+        for (const auto& [task, count] : t) {
+            if (count == 0) {
+                statusesToDelete.push_back(task);
+            }
+        }
+        
+        for (const TaskStatus status : statusesToDelete) {
+            t.erase(status);
+        }
+    }
+    
+    map<string, TasksInfo> tasks;
 };
 
 // Принимаем словарь по значению, чтобы иметь возможность
@@ -59,7 +95,7 @@ void PrintTasksInfo(TasksInfo tasks_info) {
     ", " << tasks_info[TaskStatus::DONE] << " tasks are done" << endl;
 }
 
-int main() {
+int main45() {
     TeamTasks tasks;
     
     //1 DONE
