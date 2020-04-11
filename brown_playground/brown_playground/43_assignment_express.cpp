@@ -10,6 +10,8 @@
 #include <iomanip>
 #include <set>
 #include <cmath>
+#include <limits>
+#include <stdexcept>
 
 using namespace std;
 
@@ -50,6 +52,10 @@ namespace express {
             printSet();
         }
         
+        ~DisjointSet() {
+            delete [] parent;
+            delete [] rank;
+        }
     private:
         int* parent;
         int* rank;
@@ -58,7 +64,7 @@ namespace express {
         
         int find_(int i) {
             if (i != parent[i]) {
-                parent[i] = find(parent[i]);
+                parent[i] = find_(parent[i]);
             }
             
             return parent[i];
@@ -86,13 +92,97 @@ namespace express {
             cout << "rank" << endl << endl;
         }
     };
+            
+    class ExpressScheduler {
+    public:
+        ExpressScheduler(int minValue, int maxValue) : routes(minValue, maxValue) {
+            
+        }
+        
+        void addConnection(int from, int to) {
+            routes.unionOf(from, to);
+            allStations.insert(from);
+            allStations.insert(to);
+        }
+        
+        //works only if both stations exist in the system
+        int getMinimalDistance(int x, int y) {
+            if (allStations.count(x) == 0 && allStations.count(y) == 0) {
+                throw invalid_argument("unknown stations");
+            }
+            
+            if (routeExists(x, y)) {
+                return 0;
+            }
+            
+            int from = min(x, y);
+            int to = max(x, y);
+            
+            set<int>::iterator itLow = next(allStations.lower_bound(from), 1);
+            set<int>::iterator itUp = prev(allStations.upper_bound(to), 2);
+            
+            //start at lower station an move closer to upper station
+            int bestDistanceStartingAtFrom = NOT_INITED;
+            while (*itLow != to) {
+                if (routeExists(*itLow, to)) {
+                    bestDistanceStartingAtFrom = to - *itLow;
+                    break;
+                }
+                
+                itLow++;
+            }
+            
+            //start at lower station an move closer to upper station
+            int bestDistanceStartingAtTo = NOT_INITED;
+            while (*itUp != from) {
+                if (routeExists(*itUp, to)) {
+                    bestDistanceStartingAtTo = from - *itUp;
+                    break;
+                }
+                
+                if (itUp == begin(allStations)) {
+                    break;
+                }
+                
+                itUp--;
+            }
+            
+            if ((bestDistanceStartingAtFrom == NOT_INITED) && (bestDistanceStartingAtTo == NOT_INITED)) {
+                return to - from;
+            }
+            
+            return min(bestDistanceStartingAtFrom, bestDistanceStartingAtTo);
+        }
+        
+    private:
+        static const int NOT_INITED = numeric_limits<int>::max();
+        
+        DisjointSet routes;
+        set<int> allStations;
+        
+        bool routeExists(int from, int to) {
+            return routes.find(from) == routes.find(to);
+        }
+    };
 }
 
 int main() {
-    express::DisjointSet ds(-2, 11);
-    ds.unionOf(-2, 5);
-    ds.unionOf(10, 4);
-    ds.unionOf(5, 8);
+    express::ExpressScheduler scheduler(-2, 11);
+    scheduler.addConnection(-2, 5);
+    scheduler.addConnection(10, 4);
+    scheduler.addConnection(5, 8);
+    
+    cout << scheduler.getMinimalDistance(4, 10) << endl;
+    cout << scheduler.getMinimalDistance(4, -2) << endl;
+    cout << scheduler.getMinimalDistance(5, 0) << endl;
+    cout << scheduler.getMinimalDistance(5, 100) << endl;
+    
+    
+//    express::DisjointSet ds(-2, 11);
+//    ds.unionOf(-2, 5);
+//    ds.unionOf(10, 4);
+//    ds.unionOf(5, 8);
+    
     
     return 0;
 }
