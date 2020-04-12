@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991776862443181200A89A91 /* 49_forbidden_domains.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 991776852443181200A89A91 /* 49_forbidden_domains.cpp */; };
 		99272C4324407D62005B411E /* 41_disjoint_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99272C4224407D62005B411E /* 41_disjoint_set.cpp */; };
 		992A94C0243F350C00126870 /* 36_non_owning_shared_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */; };
 		9938FBA12442101C005AD6C0 /* 45_assignment_team_tasks_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9938FBA02442101C005AD6C0 /* 45_assignment_team_tasks_1.cpp */; };
@@ -76,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		991776852443181200A89A91 /* 49_forbidden_domains.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 49_forbidden_domains.cpp; sourceTree = "<group>"; };
 		99272C4224407D62005B411E /* 41_disjoint_set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 41_disjoint_set.cpp; sourceTree = "<group>"; };
 		992A94BF243F350C00126870 /* 36_non_owning_shared_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 36_non_owning_shared_ptr.cpp; sourceTree = "<group>"; };
 		9938FBA02442101C005AD6C0 /* 45_assignment_team_tasks_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 45_assignment_team_tasks_1.cpp; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				998205D324421DE000B144A9 /* 46_assignment_bookings.cpp */,
 				998B4AA52442F29A00932882 /* 47_assignment_bookings_1.cpp */,
 				998B4AA72443009300932882 /* 48_assignment_tests.cpp */,
+				991776852443181200A89A91 /* 49_forbidden_domains.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				997B86102434DC0500AB2C2D /* 13_spendings_xml.cpp in Sources */,
 				99FE844F24308A3B005B53C7 /* 3_assignment_hash_set.cpp in Sources */,
 				997B861624359C6500AB2C2D /* spendings_json.cpp in Sources */,
+				991776862443181200A89A91 /* 49_forbidden_domains.cpp in Sources */,
 				997B86072434D71E00AB2C2D /* 11_assignment_secondary_db_index_1.cpp in Sources */,
 				99B640A724386A3E00B32CE4 /* 17_immediatelly_invoked_lambda_expr.cpp in Sources */,
 				99B640A9243878F800B32CE4 /* 18_assignment_print_stats_2.cpp in Sources */,
