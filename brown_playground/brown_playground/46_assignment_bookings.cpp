@@ -17,10 +17,6 @@ using namespace std;
 
 class HotelManager {
 public:
-    HotelManager() {
-        
-    }
-    
     void book(int time, const string& hotelName, int clientId, int roomsCount) {
         //assumption: hotel manager can't accept more than one request at a time
         //so for each point in time corresponds only one event
@@ -98,7 +94,7 @@ private:
     }
 };
 
-int main() {
+int main46() {
     //faster reading cin
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
