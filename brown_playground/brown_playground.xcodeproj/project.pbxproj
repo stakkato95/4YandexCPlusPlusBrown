@@ -25,6 +25,7 @@
 		997B861B2435A34700AB2C2D /* 13_assignment_namespaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B861A2435A34700AB2C2D /* 13_assignment_namespaces.cpp */; };
 		997B86202435A3DB00AB2C2D /* 13_ini.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B861E2435A3DB00AB2C2D /* 13_ini.cpp */; };
 		997D01C024404E2B00ECF2D3 /* 40_assignment_slow_reading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997D01BF24404E2B00ECF2D3 /* 40_assignment_slow_reading.cpp */; };
+		998205D424421DE000B144A9 /* 46_assignment_bookings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998205D324421DE000B144A9 /* 46_assignment_bookings.cpp */; };
 		998250E3243DAD62003B33D1 /* 25_assignment_polynomial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998250E2243DAD62003B33D1 /* 25_assignment_polynomial.cpp */; };
 		998250E6243DBA2D003B33D1 /* 26_assignment_object_pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998250E4243DBA2D003B33D1 /* 26_assignment_object_pool.cpp */; };
 		998250E8243DC989003B33D1 /* 27_unique_ptr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998250E7243DC989003B33D1 /* 27_unique_ptr.cpp */; };
@@ -94,6 +95,7 @@
 		997B861E2435A3DB00AB2C2D /* 13_ini.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 13_ini.cpp; sourceTree = "<group>"; };
 		997B861F2435A3DB00AB2C2D /* 13_ini.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 13_ini.h; sourceTree = "<group>"; };
 		997D01BF24404E2B00ECF2D3 /* 40_assignment_slow_reading.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 40_assignment_slow_reading.cpp; sourceTree = "<group>"; };
+		998205D324421DE000B144A9 /* 46_assignment_bookings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 46_assignment_bookings.cpp; sourceTree = "<group>"; };
 		998250E2243DAD62003B33D1 /* 25_assignment_polynomial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 25_assignment_polynomial.cpp; sourceTree = "<group>"; };
 		998250E4243DBA2D003B33D1 /* 26_assignment_object_pool.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 26_assignment_object_pool.cpp; sourceTree = "<group>"; };
 		998250E7243DC989003B33D1 /* 27_unique_ptr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 27_unique_ptr.cpp; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				99AA29832441B37400D1B584 /* 43_assignment_express.cpp */,
 				99AA29852441D84400D1B584 /* 44_assignment_team_tasks.cpp */,
 				9938FBA02442101C005AD6C0 /* 45_assignment_team_tasks_1.cpp */,
+				998205D324421DE000B144A9 /* 46_assignment_bookings.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				997B8603243244D300AB2C2D /* 9_set_extract_merge.cpp in Sources */,
 				99B243F5243F4B9100159108 /* 37_raii_test.cpp in Sources */,
 				994CBC9E2437675D009EE895 /* 16_optional.cpp in Sources */,
+				998205D424421DE000B144A9 /* 46_assignment_bookings.cpp in Sources */,
 				99DCF5AB243F04F3006E2701 /* 33_unique_ptr_deletion.cpp in Sources */,
 				997B860F2434DC0500AB2C2D /* xml.cpp in Sources */,
 				9938FBA12442101C005AD6C0 /* 45_assignment_team_tasks_1.cpp in Sources */,
