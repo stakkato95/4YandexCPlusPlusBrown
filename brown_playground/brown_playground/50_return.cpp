@@ -48,7 +48,7 @@ ComputationResult compute() {
     return { move(updatedItems), move(oldItems) };
 }
 
-int main() {
+int main50() {
     HeavyStructPtr ptr = doSomeWork();
     
     auto [updatedItems, oldItems] = compute();
