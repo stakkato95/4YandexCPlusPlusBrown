@@ -75,7 +75,7 @@ void showMonostate() {
     }
 }
 
-int main() {
+int main52() {
     //showVariant();
     showMonostate();
     
