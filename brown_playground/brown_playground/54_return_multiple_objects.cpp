@@ -44,7 +44,7 @@ void returnWithCallback(Callback callback) {
     }
 }
 
-int main() {
+int main54() {
     //when possible return 'view-types' from a function, which doesn't change the underlying collection
     //such 'view-types' are 'range', 'span', 'string_view'
     //TODO 'range' is not available yet=(
