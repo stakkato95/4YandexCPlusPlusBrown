@@ -36,6 +36,8 @@
 		998B4AA62442F29A00932882 /* 47_assignment_bookings_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998B4AA52442F29A00932882 /* 47_assignment_bookings_1.cpp */; };
 		998B4AA82443009300932882 /* 48_assignment_tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998B4AA72443009300932882 /* 48_assignment_tests.cpp */; };
 		998C3A142448333300DD10C6 /* 55_massive_constructor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998C3A132448333300DD10C6 /* 55_massive_constructor.cpp */; };
+		998C3A1624483BC200DD10C6 /* 56_massive_funs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998C3A1524483BC200DD10C6 /* 56_massive_funs.cpp */; };
+		998C3A182448459300DD10C6 /* 57_enum_flags_and_underlying_type.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998C3A172448459300DD10C6 /* 57_enum_flags_and_underlying_type.cpp */; };
 		998C786924309C2D00A62FA3 /* 5_assignment_set_iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998C786824309C2D00A62FA3 /* 5_assignment_set_iterator.cpp */; };
 		998C786B2430A81C00A62FA3 /* 6_set_custom_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998C786A2430A81C00A62FA3 /* 6_set_custom_types.cpp */; };
 		998DAAE22431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 998DAAE12431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp */; };
@@ -115,6 +117,8 @@
 		998B4AA52442F29A00932882 /* 47_assignment_bookings_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 47_assignment_bookings_1.cpp; sourceTree = "<group>"; };
 		998B4AA72443009300932882 /* 48_assignment_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 48_assignment_tests.cpp; sourceTree = "<group>"; };
 		998C3A132448333300DD10C6 /* 55_massive_constructor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 55_massive_constructor.cpp; sourceTree = "<group>"; };
+		998C3A1524483BC200DD10C6 /* 56_massive_funs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 56_massive_funs.cpp; sourceTree = "<group>"; };
+		998C3A172448459300DD10C6 /* 57_enum_flags_and_underlying_type.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 57_enum_flags_and_underlying_type.cpp; sourceTree = "<group>"; };
 		998C786824309C2D00A62FA3 /* 5_assignment_set_iterator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 5_assignment_set_iterator.cpp; sourceTree = "<group>"; };
 		998C786A2430A81C00A62FA3 /* 6_set_custom_types.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 6_set_custom_types.cpp; sourceTree = "<group>"; };
 		998DAAE12431BC7300CE4BD4 /* 7_set_nested_custom_types.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 7_set_nested_custom_types.cpp; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 				99B88F7D2445890A00638EC5 /* 53_variant_vs_exception.cpp */,
 				99B88F7F244595FC00638EC5 /* 54_return_multiple_objects.cpp */,
 				998C3A132448333300DD10C6 /* 55_massive_constructor.cpp */,
+				998C3A1524483BC200DD10C6 /* 56_massive_funs.cpp */,
+				998C3A172448459300DD10C6 /* 57_enum_flags_and_underlying_type.cpp */,
 			);
 			path = brown_playground;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FE8446242F79DB005B53C7 /* 1_head_iterator.h in Sources */,
+				998C3A182448459300DD10C6 /* 57_enum_flags_and_underlying_type.cpp in Sources */,
 				99463D92243B4706008983B4 /* 24_hashing_integers.cpp in Sources */,
 				99B640AB243895E500B32CE4 /* 19_concurrency_and_const.cpp in Sources */,
 				99937E68243F4FEB00CEC000 /* 38_assignment_unique_ptr.cpp in Sources */,
@@ -371,6 +378,7 @@
 				997B86202435A3DB00AB2C2D /* 13_ini.cpp in Sources */,
 				998250E6243DBA2D003B33D1 /* 26_assignment_object_pool.cpp in Sources */,
 				9987E8CE2438981A00E377DC /* 20_const_and_mutable.cpp in Sources */,
+				998C3A1624483BC200DD10C6 /* 56_massive_funs.cpp in Sources */,
 				99B4B224243F0BC7001BF293 /* 35_lru_cache_main.cpp in Sources */,
 				99B88F80244595FC00638EC5 /* 54_return_multiple_objects.cpp in Sources */,
 				99AA29862441D84400D1B584 /* 44_assignment_team_tasks.cpp in Sources */,
