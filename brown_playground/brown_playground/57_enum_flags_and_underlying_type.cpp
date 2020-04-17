@@ -47,7 +47,7 @@ ostream& operator<<(ostream& os, const BitFlag& flag) {
     return os;
 }
 
-int main() {
+int main57() {
     BitFlag flag = BitFlag::GONE;
     flag |= BitFlag::VISIBLE;
     cout << flag << endl;
