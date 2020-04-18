@@ -35,6 +35,7 @@ public:
 //           int tm_isdst; // hours of daylight savings time
 //        }
         
+        //ALWAYS set other values to 0. Otherweise unexpected behavior
         tm t {
             .tm_sec = 0,
             .tm_min = 0,
@@ -119,7 +120,7 @@ void showChronoTime() {
     cout << "time elapsed at " << ctime(&endTimestamp) << endl;
 }
 
-int main() {
+int main58() {
     //c++ time
     //1 struct tm
     //2 time_t (bridge between c-style time and chrono-style time)
