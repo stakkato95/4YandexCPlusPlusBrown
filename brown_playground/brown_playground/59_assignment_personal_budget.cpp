@@ -122,7 +122,7 @@ namespace PersonalBudget {
     }
 }
 
-int main() {
+int main59() {
     using namespace PersonalBudget;
     
     string input = R"(8
