@@ -30,6 +30,10 @@ using namespace std;
 #define BUS "Bus"
 #define STOP "Stop"
 
+/////////////////////////////////////////////////////////////////
+/// Core data classes
+/////////////////////////////////////////////////////////////////
+
 //summary of a route
 struct RouteInfo {
     int id = UNSET;
@@ -53,6 +57,7 @@ struct Position {
     }
 };
 
+//full information about a bus stop
 struct Stop {
     string name;
     Position position;
@@ -66,8 +71,7 @@ struct Stop {
     }
 };
 
-/////////////////////////////////////////////////////////////////
-
+//enables comparison of set elements w/o having a complete instance of a set element
 struct StopStringCompare {
     using is_transparent = void;
     
@@ -84,12 +88,20 @@ struct StopStringCompare {
     }
 };
 
+//alias for a set of bus stops
 using StopsSet = set<Stop, StopStringCompare>;
 
 /////////////////////////////////////////////////////////////////
+/// Core data classes 2
+/////////////////////////////////////////////////////////////////
 
+//short information about a given stop stored in a route
 struct StopShortInfo {
     string name;
+    //references full information about a stop
+    //reference is used, because information about a bus stop can be added AFTER a route is added
+    //another motivation, is that a single stop can be shared among multiple routes
+    //referencing a stop helps to avoid duplicating data
     optional<StopsSet::const_iterator> itStop;
     
     bool operator==(const StopShortInfo& other) const {
@@ -97,6 +109,7 @@ struct StopShortInfo {
     }
 };
 
+//information about a bus route
 struct Route {
     int id;
     bool isCircular;
@@ -108,7 +121,10 @@ struct Route {
 };
 
 /////////////////////////////////////////////////////////////////
+/// Helper functions to calculate distance of a route
+/////////////////////////////////////////////////////////////////
 
+//return value of a 'toRads' function (for a better code readability)
 struct PositionRads {
     double lat;
     double lon;
@@ -140,6 +156,7 @@ double getRouteDistance(const Route& route) {
     const list<StopShortInfo>& stops = route.stops;
     
     for (auto it = begin(stops), itNext = next(begin(stops), 1); itNext != end(stops); ++it, ++itNext) {
+        //if a stop is not found, legth of a route can't be calculated
         if (!it->itStop) {
             throwEmptyStop(it->name);
         } else if (!itNext->itStop) {
@@ -152,6 +169,7 @@ double getRouteDistance(const Route& route) {
     return route.isCircular ? distance : distance * 2;
 }
 
+//reference complete information of stops when it's necessary (when requesting complete information about a route)
 void fillEmptyStops(Route& route, const StopsSet& stops) {
     list<StopShortInfo>& routeStops = route.stops;
     
@@ -161,6 +179,7 @@ void fillEmptyStops(Route& route, const StopsSet& stops) {
             continue;
         }
         
+        //one iterator runs forward and another is behind
         if (StopsSet::const_iterator itStopFound = stops.find(it->name); itStopFound != end(stops)) {
             //stop is in StopsSet, we need to get iterator to a specific value
             it->itStop = itStopFound;
@@ -173,6 +192,8 @@ void fillEmptyStops(Route& route, const StopsSet& stops) {
 
 
 /////////////////////////////////////////////////////////////////
+/// Other helper functions
+/////////////////////////////////////////////////////////////////
 
 double roundWithPrecision(double val, int precision) {
     double correction = pow(10, precision);
@@ -180,10 +201,13 @@ double roundWithPrecision(double val, int precision) {
 }
 
 /////////////////////////////////////////////////////////////////
+/// Programm code
+/////////////////////////////////////////////////////////////////
 
 class RouteManager {
 public:
     void addStop(Stop stop) {
+        //'stop' is moved, because it was previously copied and RouteManager now owns 'stop'
         stops.insert(move(stop));
     }
     void addRoute(Route route) {
@@ -193,6 +217,7 @@ public:
             }
         }
         
+        //'route' is moved, because it was previously copied and RouteManager now owns 'route'
         routes[route.id] = move(route);
     }
     
@@ -203,6 +228,7 @@ public:
         
         Route& route = routes.at(id);
         
+        //add complete information about stops of a route
         fillEmptyStops(route, stops);
         
         return RouteInfo {
@@ -325,6 +351,8 @@ void run(istream& is, ostream& os) {
     }
 }
 
+/////////////////////////////////////////////////////////////////
+/// Unit tests
 /////////////////////////////////////////////////////////////////
 
 void testRadiansConversion() {
@@ -586,7 +614,7 @@ void testWriteOutputExistingBus() {
         }
     };
     
-    string expected = "Bus 750: 5 stops on route, 3 unique stops, 20939.5 route length";
+    string expected = "Bus 750: 5 stops on route, 3 unique stops, 20939.5 route length\n";
     
     RouteManager manager;
     manager.addRoute(route);
@@ -599,32 +627,32 @@ void testWriteOutputExistingBus() {
 }
 
 void testWriteOutputNonExistingBus() {
-    testWriteOutput(RouteManager(), 751, "Bus 751: not found");
+    testWriteOutput(RouteManager(), 751, "Bus 751: not found\n");
 }
 
 /////////////////////////////////////////////////////////////////
 
 int main() {
-//    //test utility funcitons
-//    testSplitBy();
-//
-//    //test distance calculation
-//    testRadiansConversion();
-//    testGetdistanceBetween();
-//    testRouteDistanceCircular();
-//    testRouteDistanceNonCircular();
-//
-//    //test string processor
-//    testProcessBusCircularInput();
-//    testProcessBusNotCircularInput();
-//    testProcessBusstop();
-//
-//    //test output methods
-//    testRouteInfoCircular();
-//    testRouteInfoNonCircular();
-//    testRouteInfoUnknownRoute();
-//    testWriteOutputExistingBus();
-//    testWriteOutputNonExistingBus();
+    //test utility funcitons
+    testSplitBy();
+
+    //test distance calculation
+    testRadiansConversion();
+    testGetdistanceBetween();
+    testRouteDistanceCircular();
+    testRouteDistanceNonCircular();
+
+    //test string processor
+    testProcessBusCircularInput();
+    testProcessBusNotCircularInput();
+    testProcessBusstop();
+
+    //test output methods
+    testRouteInfoCircular();
+    testRouteInfoNonCircular();
+    testRouteInfoUnknownRoute();
+    testWriteOutputExistingBus();
+    testWriteOutputNonExistingBus();
     
     string input = R"(10
 Stop Tolstopaltsevo: 55.611087, 37.20829
